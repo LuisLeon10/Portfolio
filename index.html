@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Mi Portafolio Web</title>
+    
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <header class="container" id="heading-content">
+                <div id="heading-nav">
+                    <nav id="nav-bar">
+                        <span id="heading-title">
+                            <h1 id="title">Luis Ángel Calvillo León</h1>
+                        </span>
+                        <button id="toggle-menu" class="boton" onclick="mostrar()"><i class="fas fa-bars"></i></button>
+                        <div id="nav-items" class="nav-items">
+                            <a class="nav-item" href="#about-me">Acerca de mi</a>
+                            <a class="nav-item" href="#knowledge">Habilidades</a>
+                            <a class="nav-item" href="#portfolio">Portafolio</a>
+                            <a class="nav-item" href="#contact-me">Contacto</a>
+                        </div>
+                    </nav>
+                </div>
+                <div id="heading-home">
+                        <h2 class="home-text">Hola</h2>
+                        <h1 class="home-text">Soy <b>Desarrollador Web</b></h1>
+                </div>
+            </header>
+            <article class="container" id="about-me" >
+                <div id="about-me-photo">
+                    <div id="photo-container">
+                        <img id="photo-selfie" src="images/Photo-Selfie.jpg" alt="Foto CV">
+                        <div class="text-hover">
+                            <p>Me llamo Luis Ángel Calvillo León, soy de la Universidad Tecnológica de León en León Guanajuato, México. <br><br>Me gusta aprender cosas nuevas, por lo que me considero una persona autodidacta. <br><br>
+                            Otra cosa es que tengo capacidad de adaptación ante los problemas que se me presentan siendo objetivo y lógico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="about-me-text">
+                    <div id="about-text-item">
+                        <h3 id="about-text-title">Acerca de mí</h3>
+                        <p id="about-text-paragraph">Estudiante de 9° cuatrimestre de la carrera en ingeniería con conocimientos y habilidades en desarrollo de aplicaciones web con sólidos conocimientos en HTML, CSS y JavaScript, me esfuerzo por estar al tanto de las últimas tendencias y mejores prácticas en el desarrollo web. <br><br>Además de mi experiencia técnica, tengo una mentalidad creativa, una gran atención al detalle y una pasión por el diseño estético. Siempre estoy buscando oportunidades para mejorar mis habilidades y aprender nuevas tecnologías.
+
+                            Estoy emocionado por contribuir en proyectos desafiantes y seguir creciendo como profesional en este apasionante campo orientado a seguir aprendiendo y comprometido a trabajar en un entorno colaborativo.</p>
+                        <div id="about-inputs">
+                            <a href="documents/CV_CalvilloLeonLuisAngel.pdf" target="_blank"><button class="about-input" id="btn-cv" type="button">Descargar CV</button></a>
+                            <a href="#contact-me"><button class="about-input" href="#contact-me">Contáctame</button></a>
+                        </div>
+                    </div>  
+                </div>
+            </article>
+            <article class="container" id="knowledge">
+                <div class="article-title">
+                    <h2>Conocimientos</h2>
+                </div>
+                <div class="knowledge-items">
+                    <div class="knowledge-item">
+                        <i class="fas fa-desktop"></i>
+                        <h3>HTML</h3>
+                        <p>Conocimiento sólido de HTML para crear y diseñar la estructura de páginas web.</p>
+                    </div>
+                    <div class="knowledge-item">
+                        <i class="fas fa-solid fa-file"></i>
+                        <h3>CSS</h3>
+                        <p>Habilidad para convertir una página web en un diseño atractivo y llamativo.</p>
+                    </div>
+                    <div class="knowledge-item">
+                        <i class="fas fa-sharp fa-light fa-code"></i>
+                        <h3>Javascript</h3>
+                        <p>Implementación de funcionalidad para darle el motor a la página web.</p>
+                    </div>
+                    <div class="knowledge-item">
+                        <i class="fab fa-bootstrap"></i>
+                        <h3>Bootstrap</h3>
+                        <p>Conocimiento en el framework por excelencia para un diseño prefabricado para CSS.</p>
+                    </div>
+                </div>
+                <div class="knowledge-items">
+                    <div class="knowledge-item">
+                        <i class="fas fa-sharp fa-light fa-file-code"></i>
+                        <h3>JQuery</h3>
+                        <p>Conocimiento sólido de jQuery para simplificar y agilizar el desarrollo web.</p>
+                    </div>
+                    <div class="knowledge-item">
+                        <i class="fas fa-regular fa-code-branch"></i>
+                        <h3>PHP</h3>
+                        <p>Buena noción en la tecnología para conectar la página web con la base de datos.</p>
+                    </div>
+                    <div class="knowledge-item">
+                        <i class="fas fa-sharp fa-light fa-database"></i>
+                        <h3>MySQL</h3>
+                        <p>Gran práctica para crear una base de datos solida para la página web.</p>
+                    </div>
+                    <div class="knowledge-item">
+                        <i class="fab fa-vuejs"></i>
+                        <h3>VueJS</h3>
+                        <p>Conceptos básicos en el framework del lado del cliente.</p>
+                    </div>
+                </div>
+                
+            </article>
+            <article class="container" id="portfolio">
+                <div class="article-title">
+                    <h2>Portafolio</h2>
+                </div>
+                <div class="portfolio-items">
+                    <div class="portfolio-item">
+                        <a href="#"><img src="images/Web-example.jpg" alt="Pagina web 1"></a>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#"><img src="images/Web-example.jpg" alt="Pagina web 1"></a>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#"><img src="images/Web-example.jpg" alt="Pagina web 1"></a>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#"><img src="images/Web-example.jpg" alt="Pagina web 1"></a>
+                        <p>Descripción</p>
+                    </div>
+                </div>
+            </article>
+            <article class="container" id="contact-me">
+                <div class="article-title">
+                    <h2>Contáctame</h2>
+                </div>
+                <div id="contact-content">
+                    <a href="https://www.facebook.com/luis.calvillo.54584" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=524773726416" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/luis_leon1602" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=luisprogramador01@gmail.com&su=Asunto%20aqui&body=Hola,%0D%0A%0D%0AQuiero comunicarme por..." target="_blank">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer id="main-footer">
+        <p>Esta página web fue creada con</p>
+        <img src="images/htmlcss-icons.png" alt="Tecnologías">
+    </footer>
+    <a href="#" class="boton-arriba">
+        ↑
+    </a>
+
+    <script>
+        const barraNavegacion = document.getElementById('nav-items');
+        console.log("¡Hola, mundo!");
+        function mostrar(){
+            
+            barraNavegacion.classList.toggle('mostrar');
+        }
+    </script>
+    
+</body>
+
+</html>

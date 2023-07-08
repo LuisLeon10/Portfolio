@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+.main-container{
+    background-color: whitesmoke;
+}
+.container{
+    width: 100%;
+    height: 50vw;
+}
+#heading-content{
+    background-image: url('https://images.pexels.com/photos/677582/pexels-photo-677582.jpeg?cs=srgb&dl=bosque-fondo-de-pantalla-hd-fondos-para-ordenador-677582.jpg&fm=jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    
+}
+#heading-nav{
+    width: 100%;
+    display: inline-block;
+}
+#heading-title{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    width: 80%;
+    font-size: 1.5vw;
+    color: white;
+}
+#nav-bar{
+    width: 100%;
+    height: 3.7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.boton {
+    display: none;
+}
+#nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+.nav-item{
+    width: 20%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4vw;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.7s ease;
+    border-radius: 10px;
+}
+.nav-item:hover{
+    background: #fff;
+    color: #333;
+}
+#heading-home{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.home-text{
+    width: 60%;
+    padding: 1.4vw;
+    text-align: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+.home-text b{
+    font-weight: 700;
+}
+#heading-home h1{
+    font-size: 4vw;
+    
+}
+#heading-home h2{
+    font-size: 3vw; 
+}
+
+/*Contenido de la sección "Acerca de mi"*/
+
+#about-me{
+    width: 100%;
+    display: flex;
+}
+#about-me-photo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#photo-container{
+    max-width: 60%;
+    margin-left: 40%;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+#photo-selfie{
+    max-width: 100%;
+    height: auto;
+    
+}
+#photo-container:hover{
+    transform: scale(1.1);
+}
+.text-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1vw;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 1.3vw;
+}
+#photo-container:hover .text-hover{
+    opacity: 1;
+}
+#about-me-text{
+    width: 60%;
+    height: 100%; 
+}
+#about-text-item{
+    width: 70%;
+    height: 40%;
+    margin: 25% 15% 25% 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#about-text-title{
+    font-size: 2.5vw;
+    margin-bottom: 0.6vw;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+#about-text-paragraph{
+    font-size: 1.3vw;
+    margin-top: 0.6vw;
+    margin-bottom: 0.6vw;
+    text-align: justify;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+/* Animation text */
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+/*----------------*/
+#about-inputs{
+    margin-top: 0.6vw;
+    animation-duration: 3s;
+    animation-name: slidein;
+    
+}
+.about-input{
+    width: 10vw;
+    height: 2.5vw;
+    border-radius: 5px;
+    font-size: 1.2vw;
+    border: black 1px solid;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    margin: 5px;
+    color: #111;
+    background: #f5f5f5;
+}
+.about-input::before{
+    content: '';
+    background: #333;
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(3px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10%;
+}
+.about-input:active{
+    color: #fff
+}
+.about-input:active:after {
+    background: #333;
+    color: #f1f1f1;
+}
+
+.about-input:hover:before {
+    opacity: 1;
+}
+
+.about-input:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    left: 0;
+    top: 0;
+    border-radius: 10%;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.article-title{
+    width: 100%;
+    height: 15%;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.article-title h2{
+    height: 100%;
+    padding: 4vw;
+}
+
+/* Apartado de la seccion Habilidades */
+
+#knowledge{
+    background-color: #f1f1f1;
+}
+.knowledge-items{
+    width: 100%;
+    height: 40%;
+    padding: 2.2vw;
+    display: flex;
+    justify-content: space-between;
+}
+.knowledge-item{
+    width: 30vw;
+    height: 18vw;
+    padding: 1.5vw;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    text-align: center;
+}
+.knowledge-item i {
+    font-size: 4vw;
+    color: #333;
+    margin-bottom: 1vw;
+}
+.knowledge-item h3 {
+    font-size: 2.5vw;
+    margin-bottom: 10px;
+}
+.knowledge-item p{
+    font-size: 1.3vw;
+    color: #666;
+}
+
+/* Apartado de la sección "Portafolio" */
+
+#portfolio{
+    background-color: whitesmoke;
+}
+
+.portfolio-items{
+    width: 100%;
+    height: 40%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio-item {
+    width: 30vw;
+    height: 35vw;
+    background-color: #f1f1f1;
+    border-radius: 1vw;
+    text-align: center;
+    margin-bottom: 2vw;
+    overflow: hidden;
+}
+  
+.portfolio-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    object-position: center;
+}
+  
+.portfolio-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Apartado para la sección "Contactame" */
+
+#contact-me{
+    width: 100%;
+    height: 35vw;
+    background-color: #f1f1f1;
+    display: block;
+}
+#contact-content{
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#contact-me i{
+    font-size: 5vw;
+    color: #333;
+    margin-bottom: 10px;
+    margin: 0px 3.5vw 0 3.5vw;
+    
+}
+#contact-me i:hover{
+    transition: font-size 0.3s ease;
+    font-size: 6vw;
+}
+
+/* Apartado para la sección "Footer" */
+
+#main-footer{
+    width: 100%;
+    height: 80px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-footer p{
+    display: flex;
+    width: 20%;
+    height: 40px;
+    font-size: 1.3vw;
+    align-items: center;
+    justify-content: end;
+    color: #333;
+}
+#main-footer img{
+    width: 4vw;
+    height: auto;
+    color: #fff;
+    margin-bottom: 10px;
+    margin: 0px 20px 0 20px;
+}
+
+.boton-arriba {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+  
+.boton-arriba:hover {
+    background-color: #333;
+}
+
+@media (min-width: 1024px) {
+    .portfolio-item {
+        float: left;
+        margin-right: 20px;
+    }
+    .knowledge-item {
+        float: left;
+        margin-right: 20px;
+    }
+    .boton {
+        display: none;
+    }
+    .portfolio-item {
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+    .portfolio-item:hover{
+        width: 33vw;
+        height: 38vw;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+    /* Barra de navegacion y contenido de inicio */
+    #heading-content {
+        height: 70vw !important;
+    }
+    .container{
+        height: auto;   
+    }
+    .boton {
+        display: none;
+    }
+    .nav-item{
+        width: 30%;
+        font-size: 1.8vw;
+        color: white;
+        font-weight: 700;
+    }
+    #title{
+        width: 80%;
+        font-size: 1.8vw;
+        color: white;
+    }
+    /* Seccion acerca de mi */
+    #about-me{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #about-me-photo{
+        width: 100%;
+        height: 100%;
+    }
+    #photo-container{
+        max-width: 30%;
+        margin: 10% 10% 0% 10%;
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+    }
+    #photo-selfie{
+        max-width: 100%;
+        height: auto;
+        
+    }
+    #about-text-item{
+        width: 80%;
+        margin: 10% 10%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #about-text-title{
+        text-align: center;
+        font-size: 3vw;
+        margin-bottom: 0.6vw;
+        animation-duration: 3s;
+        animation-name: none;
+    }
+    #about-text-paragraph{
+        font-size: 2vw;
+    }
+    #about-me-text{
+        width: 100%;
+    }
+    .about-input{
+        width: 15vw;
+        height: 4vw;
+        font-size: 2vw;
+    }
+
+    /* Seccion conocimiento */
+    .knowledge-item {
+        float: left;
+        margin-right: 20px;
+    }
+    /* Seccion de portafolio */
+    .portfolio-items{
+        width: 100%;
+        height: 40%;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5vw;
+        justify-items: center;
+    }
+    .portfolio-item {
+        width: 30vw;
+        height: 35vw;
+        background-color: #f1f1f1;
+        border-radius: 1vw;
+        text-align: center;
+        margin-bottom: 3vw;
+        overflow: hidden;
+    }
+      
+    .portfolio-item img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+        object-position: center;
+    }
+      
+    #main-footer p{
+        display: flex;
+        width: 25%;
+        height: 40px;
+        font-size: 1.6vw;
+        align-items: center;
+        justify-content: end;
+        color: #333;
+    }
+    #main-footer img{
+        width: 5vw;
+        height: auto;
+        color: #fff;
+        margin-bottom: 10px;
+        margin: 0px 20px 0 20px;
+    }
+}
+@media (max-width: 767px) {
+    /* Barra de navegacion y contenido de inicio */
+    #heading-content {
+        height: 70vw !important;
+    }
+    .container{
+        height: auto;   
+    }
+    .article-title{
+        font-size: 6vw;
+    }
+    #heading-nav{
+        width: 100%;
+        display: inline-block;
+    }
+    #nav-bar{
+        width: 100%;
+        height: 3.7vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .boton {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        border-radius: 50%;
+        text-decoration: none;
+        display: block;
+        z-index: 11;
+    }
+    #nav-items{
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculta la barra de navegación fuera de la pantalla */
+        width: 50%;
+        height: 100vh;
+        background-color: #333; /* Solo para visualización, puedes cambiarlo según tus necesidades */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+        z-index: 10;
+    }
+    #nav-items.mostrar {
+        right: 0;
+    }
+    .nav-item{
+        width: 100%;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff; /* Color del texto de las anclas */
+        font-size: 4vw;
+    }
+    #heading-title{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+    #title{
+        width: 100%;
+        font-size: 4vw;
+    }
+    #heading-home h1{
+        font-size: 6vw;
+        
+    }
+    #heading-home h2{
+        font-size: 5vw; 
+    }
+    /* Seccion acerca de mi */
+    #about-me{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #about-me-photo{
+        width: 100%;
+        height: 100%;
+    }
+    #photo-container{
+        max-width: 30%;
+        margin: 10% 10% 0% 10%;
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+    }
+    #photo-selfie{
+        max-width: 100%;
+        height: auto;
+        
+    }
+    #about-text-item{
+        width: 80%;
+        margin: 10% 10%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #about-text-title{
+        text-align: center;
+        font-size: 4.5vw;
+        margin-bottom: 0.6vw;
+        animation-duration: 3s;
+        animation-name: none;
+    }
+    #about-text-paragraph{
+        font-size: 3vw;
+    }
+    #about-me-text{
+        width: 100%;
+    }
+    .about-input{
+        width: 22vw;
+        height: 6vw;
+        font-size: 3vw;
+    }
+
+    /* Seccion conocimiento */
+    .knowledge-items{
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .knowledge-item{
+        width: 45vw;
+        height: 30vw;
+        padding: 10% 1.5vw;
+        margin: 10% 0;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+    }
+    .knowledge-item i {
+        font-size: 10vw;
+        color: #333;
+        margin-bottom: 1vw;
+    }
+    .knowledge-item h3 {
+        font-size: 6vw;
+        margin-bottom: 10px;
+    }
+    .knowledge-item p{
+        display: none;
+    }
+    /* Seccion de portafolio */
+    .portfolio-items{
+        width: 100%;
+        height: 40%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .portfolio-item {
+        width: 80vw;
+        height: 110vw;
+        background-color: #f1f1f1;
+        border-radius: 1vw;
+        text-align: center;
+        margin-bottom: 10vw;
+        overflow: hidden;
+    }
+      
+    /*Seccion de contactame */
+    #contact-me i{
+        font-size: 6vw;
+    }
+    /* Seccion del footer */
+
+    #main-footer{
+        width: 100%;
+        height: 40px;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #main-footer p{
+        width: 50%;
+        height: 20px;
+        font-size: 3vw;
+    }
+    #main-footer img{
+        width: 8vw;
+    }
+}
